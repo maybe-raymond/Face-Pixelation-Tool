@@ -13,6 +13,15 @@ A Python script for pixelating faces in images or videos using OpenCV and a pre-
 - Allows specifying input and output paths via command-line arguments.
 
 ---
+## Examples
+### Video
+
+
+https://github.com/user-attachments/assets/95578048-c933-4e6d-8ee0-f01faa9318bb
+
+
+### Picture 
+![hat](https://github.com/user-attachments/assets/00e89786-7c98-4552-bd20-7d1082706a1b)
 
 ## Requirements
 
