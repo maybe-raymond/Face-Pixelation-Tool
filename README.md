@@ -28,7 +28,7 @@ https://github.com/user-attachments/assets/95578048-c933-4e6d-8ee0-f01faa9318bb
 - Python 3.7 or later
 - OpenCV (with ONNX support)
 - NumPy
-
+- [FFmpeg](https://ffmpeg.org/) (to be locally installed)
 ---
 
 ## Installation
