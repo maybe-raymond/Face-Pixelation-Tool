@@ -58,14 +58,14 @@ Run the script from the command line, providing paths for input and output files
 
 1. **Process a Video:**
    ```bash
-   python face_pixelation.py -v path/to/video.mp4 -o output_video
+   python pixelette.py -v path/to/video.mp4 -o output_video
    ```
    - Input: `path/to/video.mp4`
    - Output: `output_video.mp4`
 
 2. **Process an Image:**
    ```bash
-   python face_pixelation.py -i path/to/image.jpg -o output_image
+   python pixelette.py -i path/to/image.jpg -o output_image
    ```
    - Input: `path/to/image.jpg`
    - Output: `output_image.jpg`
@@ -73,7 +73,7 @@ Run the script from the command line, providing paths for input and output files
 3. **Missing Input Argument:**
    If neither `-v` nor `-i` is provided, the script will display:
    ```
-   Please provide either a video or image path for processing.
+   Please provide either a video or an image path for processing.
    ```
 
 ---
