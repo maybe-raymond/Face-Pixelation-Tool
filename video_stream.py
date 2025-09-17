@@ -3,18 +3,33 @@ import ffmpeg
 from typing import Callable
 
 
-def add_audio(inputVideo:str, outVideo:str) -> None:
+
+def process_video(vid_paths: list[str], out_paths: list[str], transform_func):
+
+    for index, file in enumerate(vid_paths):
+        print(f"Starting to process Video {file}")
+        try:
+            manipulate_vid(file, out_paths[index], transform_func)
+            print(f"video {file} saved as {out_paths[index]}")
+        except IndexError:
+            manipulate_vid(file, f"out_vid_{index}", transform_func)
+            print(f"video {file} saved as out_vid_{index}")
+
+ 
+
+
+def add_audio(input_video:str, out_video:str) -> None:
     """
     Opens the orginal video and video only one
     It then combines them toghter 
     """
-    orginal = ffmpeg.input(inputVideo)
-    generated = ffmpeg.input(f"{outVideo}.mp4")
+    orginal = ffmpeg.input(input_video, loglevel="error")
+    generated = ffmpeg.input(f"{out_video}.mp4")
 
     orginal_audio = orginal.audio
     combined = ffmpeg.concat(generated, orginal_audio, v=1, a=1)
 
-    out = combined.output(f"{outVideo}_audio.mp4")
+    out = combined.output(f"{out_video}_audio.mp4")
     out.run()
 
 

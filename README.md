@@ -70,7 +70,12 @@ Run the script from the command line, providing paths for input and output files
    - Input: `path/to/image.jpg`
    - Output: `output_image.jpg`
 
-3. **Missing Input Argument:**
+3. **Process an muliple images and videos:**
+   ```bash
+   python pixelette.py -i img_1 img_2 img_3 -o out_1 out_2 out_3
+   ```
+
+4. **Missing Input Argument:**
    If neither `-v` nor `-i` is provided, the script will display:
    ```
    Please provide either a video or an image path for processing.
